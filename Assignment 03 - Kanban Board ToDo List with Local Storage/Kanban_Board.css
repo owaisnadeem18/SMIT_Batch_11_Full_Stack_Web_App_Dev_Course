@@ -17,10 +17,15 @@ body {
 }
 
 .Kanban-container {
-  margin: 3rem auto;
+  margin: 1rem auto;
   border-radius: 10px;
-  padding: 3rem 2rem;
-  background-image: url("https://cdn.create.vista.com/api/media/small/645801696/stock-photo-green-chalkboard-chalk-texture-school-board-display-background-chalk-traces");
+  padding: 1rem;
+  background-image: url("https://i.pinimg.com/474x/ce/01/cb/ce01cbea09e8b6af7d67a439baad667f.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  /* height: 400px; */
+  width: 100%;
 }
 
 .width {
@@ -110,7 +115,6 @@ body {
 }
 
 .tasks ul li {
-  cursor: pointer;
   font-size: 1.3rem;
 }
 
@@ -122,6 +126,14 @@ body {
 
 .task-icons span {
   cursor: pointer;
+}
+
+.task-icons button {
+  background-color: rgb(122, 111, 202);
+}
+
+.handling-scrollbar ul {
+  cursor: grab;
 }
 
 @media screen and (max-width: 992px) {

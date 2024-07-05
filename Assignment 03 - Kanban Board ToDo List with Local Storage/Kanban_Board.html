@@ -77,7 +77,17 @@
                 </button>
               </div>
 
-              <div class="handling-scrollbar" id="entered_tasks"></div>
+              <!-- -----------------------------------------  -->
+              <!-- This is the container of tasks which we are getting from the JS as
+              inner html , so we have to use drag for it -->
+
+              <div
+                class="handling-scrollbar"
+                draggable="true"
+                id="entered_tasks"
+              ></div>
+
+              <!-- -----------------------------------------  -->
             </div>
           </div>
         </div>
@@ -93,12 +103,12 @@
             </div>
             <div class="border-line"></div>
 
-            <div class="handling-scrollbar" id="doing_tasks"></div>
+            <div class="handling-scrollbar tasks" id="doing_tasks"></div>
           </div>
         </div>
 
         <!-- 3rd Container of three -->
-        <div class="col-12 col-lg-4 box-parent">
+        <div class="col-12 col-lg-4 box-parent tasks">
           <div class="done width bg box">
             <div
               class="heading-content d-flex align-items-center justify-content-center gap-2"
@@ -122,5 +132,8 @@
     <script src="bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Add Sortable.js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
   </body>
 </html>
