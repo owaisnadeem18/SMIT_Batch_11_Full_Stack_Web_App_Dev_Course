@@ -6,6 +6,7 @@ import { Rating } from "@mui/material"; // Import Rating component
 export default function AllProducts() {
   const [input, setInput] = useState("");
   const [APIData, setAPIData] = useState([]);
+  const [FilterData, SetFilterData] = useState([]);
 
   const handleChange = (e) => {
     setInput(e.target.value);
@@ -22,6 +23,17 @@ export default function AllProducts() {
   useEffect(() => {
     getApiData();
   }, []);
+
+  // Filter products based on input
+
+  const filtered = APIData.filter(
+    (item) =>
+      item.category.toLowerCase().includes(input.toLowerCase()) ||
+      item.title.toLowerCase().includes(input.toLowerCase())
+  );
+
+  SetFilterData(filtered);
+  console.log(filtered);
 
   return (
     <>
@@ -40,7 +52,7 @@ export default function AllProducts() {
       <div className="products-container flex flex-col gap-4 p-4">
         {/* Product cards will be generated here */}
 
-        {APIData.map((item) => {
+        {FilterData.map((item) => {
           return (
             <>
               <div className="border p-5 flex items-center gap-4 rounded-md bg-slate-900 ">
